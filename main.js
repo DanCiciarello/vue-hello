@@ -4,7 +4,17 @@ const appVue = new Vue ({
     // Vue Data
     data: {
         pageTitle: "Hello Vue.js!",
-        titleClasses: "text-center py-5",
-        imageUrl: "https://picsum.photos/1200/800"
+        titleClass: "text-center pt-5",
+        imageUrl: "https://picsum.photos/1200/800",
+        imageClass: "py-5 d-flex justify-content-center",
+        inputText: "",
+        resultText: "",
+        resultTextClass: "",
+    },
+    methods: {
+        generate: function(){
+            this.resultTextClass = "text-success"
+            this.resultText = this.inputText;
+        },
     }
 });
